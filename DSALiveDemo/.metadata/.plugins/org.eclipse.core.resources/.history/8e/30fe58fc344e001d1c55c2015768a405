@@ -1,0 +1,11 @@
+package queuefromscratch;
+
+public class QueueDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SimpleQueue myQueue = new SimpleQueue(9);
+		
+	}
+
+}

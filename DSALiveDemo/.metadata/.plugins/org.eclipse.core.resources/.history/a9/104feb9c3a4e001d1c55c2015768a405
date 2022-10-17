@@ -1,0 +1,39 @@
+package stackfromscratch;
+
+public class StackDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SimpleStack myStack = new SimpleStack(4);
+		myStack.push(20);
+		myStack.push(30);
+		myStack.push(40);
+		myStack.push(50);
+		
+		while(!myStack.isEmpty()) {
+			long value = myStack.pop();
+			System.out.println(value);
+		}
+		
+		
+		/*
+		 * Challenge: 
+		 * Create a method that will reverse the order of a string chatracter by character. 
+		 * First: create a class that will initialize a stack of chars, so that the underlying
+		 * array would a an array of chars rather than a long
+		 * 
+		 * Fill out the method for the following method signatrure: 
+		 * 
+		 * public static String reverseString(String str){
+		 * 		//use this method to reverse the order of a string
+		 * 
+		 * 		return null;
+		 * } 
+		 * 
+		 * */
+		
+		
+	}
+
+}

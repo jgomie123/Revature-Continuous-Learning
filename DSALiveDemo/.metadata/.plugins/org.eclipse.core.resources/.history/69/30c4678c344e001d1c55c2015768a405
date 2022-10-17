@@ -1,0 +1,78 @@
+package queuefromscratch;
+
+/*A queue is a linear data structure that follows a FIFO (first in first out) order.
+ * A queue is open-ended, meaning that you can one end is for inserting  the data 
+ * and the other end is for deleting the data (enqueue and dequeue)
+ * 
+ * You would use  a quueue when you need to hold elments oprior to processing 
+ * 
+ * if you look at the Collection framwork for queue, queues provide additional insertion, extration, and inspection 
+ * operations. Each of these methods exist in 2 forms, one throws an exception if the operations fails
+ * the other returns a value (either null or false depending on the operations). 
+ * 
+ * There is one exception to the FIFO - PriorityQueue's implementation is one where elements are ordered according
+ * to a supplied comparator, or the element's natural ordering. 
+ * 
+ * */
+
+public class SimpleQueue {
+	
+	private long [] queueArray; //this is going to hold the main data for my queue
+	private int maxSize; //for the set number of slots in my queue
+	private int front; //this will be the index position foer the element in th3 front
+	private int rear; //keep track of the last element
+	private int qItems; //a counter to maintain the number of items in our queue
+	
+	public SimpleQueue(int size) { //intitializing our queue as an empty queue
+		this.maxSize = size;
+		this.queueArray = new long[size];
+		front = 0;
+		rear = -1; //there is not item in the array yet to be considered the last item
+		qItems = 0;//no elements in array 
+	}
+	
+	public void insert(long j) {
+		/* Not only does this prevent an unchecked exception (IndexOutOfBounds), but
+		 * notice that because I am resetting the rear element every time I insert a new element,
+		 * by doing so I can create what is called a CircularQueue - with a CircularCQueue, 
+		 * the values will be overwritten by a later additional value if the number of elements added is more
+		 * than the max number of elements allowed
+		 * */
+		if (rear == maxSize - 1) {
+			rear = -1; 
+		}
+		
+		rear++;
+		queueArray[rear] = j;
+		qItems++;
+	}
+	
+	public long remove() {
+		long temp = queueArray[front];
+		front++;
+		
+		if (front == maxSize) {
+			front = 0;
+		}
+		qItems--;
+		return temp;
+	}
+	
+	public long peekFront() {
+		return queueArray[front];
+	}
+	
+	public boolean isEmpty() {
+		return (qItems == 0);
+	}
+	
+	public boolean isFull() {
+		return (qItems == maxSize);
+	}
+	
+	public void view() {
+		
+	}
+	
+
+}

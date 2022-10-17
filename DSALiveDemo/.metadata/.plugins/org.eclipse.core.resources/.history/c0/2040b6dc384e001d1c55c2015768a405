@@ -1,0 +1,57 @@
+package stackfromscratch;
+
+/*A stack is also a linear data structure that follows a particular order of adding or removing elments
+ * A stack is FILO (first in last out) 
+ * 
+ * We can use stacks in a variety of ways when we code - for exmaple, we use stacks to implement parsers, we can 
+ * use it for expression evaluation, and some algorithms as well. 
+ * 
+ * One real world application for stack is when reversing the order of a string letter by letter; another exmaple
+ * could be an undo or redo function of a text editor
+ * */
+
+public class SimpleStack {
+	
+	private long[] stackArray;
+	private int maxSize;
+	public int top; //this is the index of the last item that was placed on top of the stack
+	
+	public SimpleStack(int size) {
+		this.maxSize = size;
+		this.stackArray = new long[maxSize];
+		this.top = -1; //we initialize this as -1 because the item at the top will increment by 1 (index of 0) when we first push an\
+		//an item - top is to be used as a pointer
+	}
+	
+	public void push(long j) {
+		if (isFull()) {
+			System.out.println("stack is full");
+		} else {
+			top++; 
+			stackArray[top] = j;
+		}
+		
+	}
+	
+	public long pop() {
+		if (isEmpty()) {
+			System.out.println("Stack is already empty");
+		}else {
+			int oldTop = top; 
+			top--;
+			return stackArray[oldTop];
+		}
+		
+	}
+	
+	
+	public boolean isFull() {
+		return (maxSize - 1 == top);
+	}
+	
+	public boolean isEmpty() {
+		return (top == -1);
+	}
+	
+	
+}
