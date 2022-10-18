@@ -1,0 +1,30 @@
+package algorithms.and.patterns;
+
+/*A sorting algorithm is used to rearrange a given array or list of elements according to a 
+ * comparison operator on the elements. 
+ * The comparison operator is used to decide the new order of the elements in the respective data structure
+ * 
+ * 5 Popular sorting algorithms: 
+ * Merge sort: O(nlog(n))
+ * Heap sort - O(nlog(n))
+ * Insertion sort - Quadratic time complexity
+ * Selection sort - Quadratic
+ * Bubble sort - Quadratic
+ * 
+ * */
+
+public class SortingAlgorithms {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int array[] = {5, 3, 10, 9, 12, 100, 1000, 32, 0, -3};
+		
+	}
+	
+	public static int[] selectionSorter (int[] numArray){
+		
+		return numArray; 
+	}
+
+}

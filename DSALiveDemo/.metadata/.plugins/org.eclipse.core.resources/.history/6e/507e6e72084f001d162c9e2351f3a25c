@@ -1,0 +1,73 @@
+package algorithms.and.patterns;
+
+/*A sorting algorithm is used to rearrange a given array or list of elements according to a 
+ * comparison operator on the elements. 
+ * The comparison operator is used to decide the new order of the elements in the respective data structure
+ * 
+ * 5 Popular sorting algorithms: 
+ * Merge sort: O(nlog(n))
+ * Heap sort - O(nlog(n))
+ * Insertion sort - Quadratic time complexity
+ * Selection sort - Quadratic
+ * Bubble sort - Quadratic
+ * 
+ * */
+
+public class SortingAlgorithms {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int array[] = {5, 3, 10, 9, 12, 100, 1000, 32, 0, -3};
+		array = selectionSorter(array);
+		
+		System.out.print("Selection sort: [ ");
+		for(int i = 0; i< array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.print("]");
+		
+	}
+	
+	//Selection sort: Quadratic time complexity
+	/*For this sorting algorithm, during each cycle we are trying to find the smallest item from the unsorted list
+	 * TO find the smallest item int he array, we will be using a temp variable to keep track of the index that points
+	 * to the smallest item. We then compare each item int he array to the that temp variable, and then updating the 
+	 * new index if necessary
+	 * 
+	 * After we have compared all the elements, we swap the smallest index with the first index of the unsorted array
+	 * that element is not part of the sort array
+	 * */
+	public static int[] selectionSorter (int[] numArray){
+				
+		for(int i = 0; i< numArray.length; i++) {
+			int minIndex = i;
+			for(int j = i; j < numArray.length; j++) {
+				if(numArray[j] < numArray[minIndex]) {
+					minIndex = j;
+				}
+			}
+			int temp = numArray[i];
+			numArray[i] = numArray[minIndex];
+			numArray[minIndex] = temp;
+		}
+		return numArray; 
+	}
+	
+	//Bubble Sort: Quadratic time
+	/*For each loop through the array, we use a pointer to point to the first element, and we we then compare 
+	 * that number to the next element, and we swap them if the frist element is larger
+	 * */
+	
+	public static int[] bubbleSorter (int[] numArray) {
+		
+		for(int i = numArray.length - 1; i >= 0; i--) {
+			for(int j = 0; j < i; j++) {
+				
+			}
+		}
+		
+		return numArray;
+	}
+
+}

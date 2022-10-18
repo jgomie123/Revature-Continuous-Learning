@@ -1,0 +1,36 @@
+package algorithms.and.patterns;
+
+/*When we are writing methods, or when we code in general, 
+ * especially as we start working on larger applications, and even during interviews,
+ * we should put sopme thought into how "efficient" our code is. 
+ * For example, perhaps you or your employer are concerned with how much memory
+ * your implementation requires. You or your employer, or your interviewer
+ * might also be concerned about how fast an algorithm runs. 
+ * 
+ * When we concern ourselves with how fast an algorithm runs, then we are thinking about what is called
+ * the Time COmplexity of the algorithm. To represent an algorithm's time complexity, 
+ * we use "Big O Notation". For example: 
+ * 
+ * O(1) - Constant time: Hashmap lookup, array access and update, pushing and popping elements from a stack
+ * O(n^2) - Quadratic time: Nested loops, oftentimes brute force solutions 
+ * O(n) -  Linear time: going through an array/linked list 
+ * O(log(n))(log(n) - Logarithmic time: grows slowly; binary search or some sort of variant 
+ * 
+ * The idea behind time complexity is that even though an algorithm might not take "long" time to run when the 
+ * data set is small, it could scale very poorly and take much longer to run as the data set increases
+ * */
+
+public class searchingalgorithms {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] numArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+		
+		
+	}
+	
+	/*this method will search for the largest number in the array
+	 * */
+
+}
