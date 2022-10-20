@@ -1,0 +1,23 @@
+package trees;
+
+/*
+ * What is a tree: 
+ * A Tree is a type of graph composed of nodes (object) and edges (edcges are what connect your nodes to each other)
+ * Main properties of a tree: 
+ * - Acyclic - a node path does not connect to the same node in a cycle
+ * - There is a path from the root node to any node
+ * - There are n - 1 edges in your tree
+ * - Each node will have xactly one parent node, with the exception of the root node
+ * 
+ * A few types of trees: 
+ * - General trees
+ * - Binary tree : a binary tree will have between 0 - 2 child nodes for each node 
+ * - Binary search tree
+ * - N-ary tree : Depending on the value of N, you will have between 0 - N child nodes per node
+ * 
+ * 
+ * */
+
+public class BinaryTree {
+
+}

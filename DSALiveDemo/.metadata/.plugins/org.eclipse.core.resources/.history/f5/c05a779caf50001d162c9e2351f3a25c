@@ -1,0 +1,80 @@
+package trees;
+
+/*
+ * What is a tree: 
+ * A Tree is a type of graph composed of nodes (object) and edges (edcges are what connect your nodes to each other)
+ * Main properties of a tree: 
+ * - Acyclic - a node path does not connect to the same node in a cycle
+ * - There is a path from the root node to any node
+ * - There are n - 1 edges in your tree
+ * - Each node will have xactly one parent node, with the exception of the root node
+ * 
+ * A few types of trees: 
+ * - General trees
+ * - Binary tree : a binary tree will have between 0 - 2 child nodes for each node 
+ * - Binary search tree : is organized in a way (sorted) where the smaller values are organized to the left
+ * and the larger values are organized to the right of the tree. 
+ * 
+ * all descendants < root < all descendants 
+ * 
+ * - N-ary tree : Depending on the value of N, you will have between 0 - N child nodes per node
+ * 
+ * TreeSet: is an implementation of the SortedSet interface which uses a tree for storage. It is a binary search tree,
+ * which follows natural ordering. There can be no duplicates in TreeSet, nor in binary search trees in general. 
+ * 
+ * 
+ * */
+
+public class BinaryTree {
+	public int value; //this is the actual data I want to store in my tree
+	public BinaryTree right; //this will point to the nodes on the right side of my tree
+	public BinaryTree left; //this is point to the nodes on the left side of my tree
+	
+	//this will be used to create my root node (AKA vertex)
+	public BinaryTree(int value) {
+		this(value, null, null);
+	}
+	
+	public BinaryTree(int value, BinaryTree left, BinaryTree right) {
+		this.value = value;
+		this.left = left;
+		this.right = right;
+	}
+	
+	
+	/*Note that this will be a recursive method. 
+	 * While recursion is easier in this case while our tree is small, if you know that your tree
+	 * will be very deep, then it's best to avoid a recursive-based solution. 
+	 * */
+	public static BinaryTree insert(BinaryTree tree, int value) {
+		if (tree == null) { //if the current tree is null, then either this value will be the root for my tree
+			//of I have reached a leaf node in that position
+			return new BinaryTree(value);
+		}
+		
+		if(value < tree.value) {
+			tree.left = insert(tree.left, value);
+		} else if(value > tree.value) { //if the value is larger it's organized on the right side
+			tree.right = insert(tree.right, value);
+		} else {
+			//if the value already exists
+			return tree;
+		}
+		return tree;
+	}
+	
+	public static boolean find(BinaryTree tree, int value) {
+		if(tree == null) {
+			return false;
+		}
+		
+		if(value == tree.value) {
+			return true;
+		}else if(value < tree.value) {
+			find(tree.left, value); //if my value is smaller, keep looking ont he left side of the tree
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package algorithms.and.patterns;
+
+/*Merge Sort: 
+ * 
+ * */
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

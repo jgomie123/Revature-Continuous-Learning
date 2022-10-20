@@ -1,0 +1,42 @@
+package algorithms.and.patterns;
+
+/*Merge Sort: 
+ * Merge sort uses the divide and conquer strategy for sorting elements. 
+ * It recursively breaks down a problem into 21 or more sub problems intil they become simple enough
+ * to be solved directly. The solutions to the sub-problems are then combined to give a solution
+ * to the original problem. 
+ * 
+ * The merge sort algorithm looks something like this: 
+ * **arr = array that is being sorted
+ * **left = first index's position
+ * **right = last index's position
+ * 
+ * //			mergeSort(arr, left, right) {
+//
+//			    if (left < right) {
+//
+//			        int mid = [(left + right) / 2];
+//			        mergeSort(arr, left, mid); // here we pass in the mid point as the new 
+ * 						"last" index position of the left array
+//			        mergeSort(arr, mid + 1, right); // (mid + 1) represents the "first" index position of the right array
+//
+//			        // once the splitting is done, it combines the two completes sorted halves.
+//			        merge(arr, left, mid, right);
+//			    }   
+//			}
+ *  
+ * */
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] array = {9, 7, 3, 1, 6, 3, 4, 5, 9, 2, 3, 1, 0};
+		
+		
+	}
+	
+	
+
+}

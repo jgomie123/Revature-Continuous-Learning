@@ -1,0 +1,12 @@
+package trees;
+
+/*
+ * What is a tree: 
+ * A Tree is a type of graph composed of nodes (object) and edges (edcges are what connect your nodes to each other)
+ * Main properties of a tree: 
+ * - Acyclic - a node path does not connect to the same node in a cycle
+ * */
+
+public class BinaryTree {
+
+}

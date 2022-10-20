@@ -8,7 +8,7 @@ package algorithms.and.patterns;
  * Merge sort: O(nlog(n))
  * Heap sort - O(nlog(n))
  * Insertion sort - Quadratic time complexity
- * Selection sort - Quadratic
+ * Selection sort - Quadratic (O(n^2))
  * Bubble sort - Quadratic
  * 
  * */

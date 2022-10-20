@@ -1,0 +1,10 @@
+package trees;
+
+/*
+ * What is a tree: 
+ * A Tree is a type of graph composed of nodes (object) and edges (edcges are what connect your nodes to each other)
+ * */
+
+public class BinaryTree {
+
+}
