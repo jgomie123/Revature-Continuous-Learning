@@ -1,0 +1,22 @@
+package maps;
+
+public class CustomMap {
+	private int size;
+	private CustomEntry[] map;
+	
+	public CustomMap(int size) {
+		this.size = size;
+		map = new CustomEntry[size];
+	}
+	
+	public void put(String key, String value) {
+		CustomEntry newEntry = new CustomEntry(key, value);
+		for(int i = 0; i < size; i++) {
+			if(map[i] == null) {
+				map[i] = newEntry;
+			}
+		}
+	}
+	
+
+}

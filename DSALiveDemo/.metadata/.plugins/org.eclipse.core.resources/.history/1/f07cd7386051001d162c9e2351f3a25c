@@ -1,0 +1,21 @@
+package maps;
+
+public class CustomMapDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CustomMap map = new CustomMap(20);
+		
+		map.put("peekachu", "an electic type polkaman");
+		map.put("fire lizard", "a fire type polkaman");
+		map.put("water turtle", "a water type polkaman");
+		map.put("big bird", "a flying type polkaman");
+		map.put("ferret", "a ground type polkaman");
+		
+		map.display();
+		
+
+		
+	}
+
+}

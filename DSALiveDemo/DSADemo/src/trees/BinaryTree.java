@@ -3,15 +3,6 @@ package trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/*A graph is a non-linear data structure that consists of nodes (vertices) and edges (edges can be known as 
- * lines or arcs). 
- * We use graphs to solve real-world problems usually having to do with networks, because we use the graph
- * to represent the network. For example we can use graphs to model networks such as telephone networksa, circuit networks, 
- * neighborhoods (how the roads in a city connect), etc. 
- * Graphs are also used in social networks such as Facebook, LinkedIn, etc. For example: each person is represented 
- * as a node (vertex), and each node structure can contain info such as their id, name, locale, etc. 
- * 
- * */
 
 /*
  * What is a tree: 

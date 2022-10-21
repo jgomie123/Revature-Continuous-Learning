@@ -1,0 +1,48 @@
+package graphs;
+
+import java.util.Queue;
+
+public class GraphDriver {
+	
+	/*Breadth first search is a graph traversal algorithm 
+	 * In this searching algorithm we look at the data structure level by level
+	 * 
+	 * In this case, we will be using a queue to tarverse the graph
+	 * The queue should repeatedly extract the node and put its neighbors in the queue.
+	 * The only real difference between how we wil implement breadth first search with this graph vs how we 
+	 * did so with our binary tree, is that with our graph we shouldkeep track of whether or not the 
+	 * node has been "visited" or not
+	 * */
+	
+	//private Queue<Node> queue;
+	
+	
+	public void BreadthFirstSearch(Node node) {
+		Queue<Node> queue = new Linkedlist<Node>();
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Node node40 = new Node(40);
+		Node node50 = new Node(50);
+		Node node60 = new Node(60);
+		Node node70 = new Node(70);
+		Node node80 = new Node(80);
+		Node node90 = new Node(90);
+		Node node100 = new Node(100);
+
+		
+		node40.addNeighbors(node50);
+		node40.addNeighbors(node60);
+		node50.addNeighbors(node60);
+		node60.addNeighbors(node70);
+		node70.addNeighbors(node40);
+		node70.addNeighbors(node50);
+		node90.addNeighbors(node50);
+
+
+	}
+
+}

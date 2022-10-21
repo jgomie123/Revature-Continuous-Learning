@@ -1,0 +1,12 @@
+package maps;
+
+public class CustomMap {
+	private int size;
+	private CustomEntry[] map;
+	
+	public CustomMap(int size) {
+		this.size = size;
+		map = new CustomEntry[size];
+	}
+
+}

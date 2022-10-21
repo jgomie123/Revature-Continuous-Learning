@@ -1,0 +1,7 @@
+package maps;
+
+public class CustomMap {
+	private int size;
+	private CustomEntry[] map;
+
+}
